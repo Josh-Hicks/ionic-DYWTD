@@ -1,0 +1,21 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <div class="list">
+        <a class="item item-thumbnail-left" ng-repeat="dog in dogs">
+          <img ng-src="{{dog.image}}">
+          <h2>{{dog.name}}</h2>
+          <p>Walks Today: {{dog.walks}}</p>
+          <p>Feedings Today: {{dog.feedings}}</p>
+          <button class="button button-calm" ng-click="walk(dog)">
+            <i class="fa fa-paw"> Walk</i>
+          </button>
+          <button class="button button-calm" ng-click="feed(dog)">
+            <i class="fa fa-cutlery"> Feed</i>
+          </button>
+          <button class="button button-calm">
+              <i class="fa fa-pencil"> Edit</i>
+          </button>
+        </a>
+    </div>  
+  </ion-content>
+</ion-view>
